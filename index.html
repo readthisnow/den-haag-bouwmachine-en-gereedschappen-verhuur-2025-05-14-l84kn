@@ -3,136 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Den Haag Bouwmachine en Gereedschappen Verhuur</title>
-    <meta name="description" content="Professionele verhuur van bouwmachines en gereedschappen in Den Haag">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Den Haag Verhuur - Materieel voor Bouw, Tuin & Evenementen</title>
+    <meta name="description" content="Den Haag Verhuur: breed assortiment professioneel materieel, gereedschap en machines te huur in Den Haag voor bouw, tuin en evenementen. Voordelig en snel geleverd.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
-<body class="font-sans antialiased text-gray-800 bg-gray-50">
-    <header class="fixed w-full bg-white shadow-md z-50" x-data="{ isOpen: false }">
-        <nav class="container mx-auto px-6 py-4">
-            <div class="flex items-center justify-between">
-                <div class="text-xl font-bold text-gray-800">
-                    Den Haag Verhuur
+<body class="font-sans antialiased bg-gray-50">
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex-shrink-0">
+                    <h1 class="text-2xl font-bold text-blue-600">Den Haag Verhuur</h1>
                 </div>
-                <button @click="isOpen = !isOpen" class="md:hidden focus:outline-none">
-                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
-                    </svg>
-                </button>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#diensten" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Diensten</a>
-                    <a href="#voordelen" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Voordelen</a>
-                    <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">FAQ</a>
-                    <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                <div class="flex items-center space-x-3 md:space-x-4">
+                    <div class="hidden md:flex space-x-6 items-center">
+                        <a href="#features" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Machines</a>
+                        <a href="#assortiment" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Ons Assortiment</a>
+                        <a href="#benefits" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Voordelen</a>
+                        <a href="#faq" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">FAQ</a>
+                        <a href="#contact" class="text-gray-600 hover:text-blue-600 transition-colors duration-300">Contact</a>
+                    </div>
+                    <a href="https://hansschuiling.nl" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-3 py-2 md:px-4 md:py-2 rounded-lg text-xs md:text-sm shadow-md transition-colors duration-300 whitespace-nowrap">Huur Nu ➜</a>
                 </div>
             </div>
         </nav>
+        <div class="mobile-menu hidden md:hidden bg-white w-full border-t border-gray-100">
+            <a href="#features" class="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Machines</a>
+            <a href="#assortiment" class="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Ons Assortiment</a>
+            <a href="#benefits" class="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Voordelen</a>
+            <a href="#faq" class="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">FAQ</a>
+            <a href="#contact" class="block px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-600 transition-colors duration-300">Contact</a>
+        </div>
     </header>
 
     <main>
-        <section class="pt-32 pb-24 bg-gradient-to-r from-blue-50 to-gray-50">
-            <div class="container mx-auto px-6">
-                <div class="max-w-4xl mx-auto text-center">
-                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-8">
-                        Den Haag Bouwmachine en Gereedschappen Verhuur
-                    </h1>
-                    <p class="text-xl text-gray-600 mb-12">
-                        Professionele verhuur van bouwmaterieel en gereedschappen voor vakman en particulier
+        <section id="hero" class="pt-32 pb-20 bg-gradient-to-r from-blue-50 to-blue-100">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-4xl mx-auto">
+                    <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Bouwmachine en Gereedschap Verhuur in Den Haag
+                    </h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Voordelig en Snel Geleverd voor uw Project! 🔥 Profiteer van 15% korting bij directe reservering - beperkte voorraad!
                     </p>
-                    <a href="https://hansschuiling.nl" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-blue-700 transform hover:scale-105 transition duration-300">
-                        Bekijk ons aanbod
+                    <a href="https://hansschuiling.nl" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition duration-300 shadow-lg">
+                        Bekijk Aanbod & Reserveer ➜
                     </a>
                 </div>
             </div>
         </section>
 
-        <section id="diensten" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Ons Assortiment</h2>
+        <section id="features" class="py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">⚡ POPULAIRE MACHINES - DIRECT BESCHIKBAAR!</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-semibold mb-4">Bouwmachines</h3>
-                        <p class="text-gray-600">Professionele bouwmachines voor elk project</p>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-tractor text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Minigravers</h3>
+                        <p class="text-gray-600">Perfect voor tuinprojecten en graafwerk. Huur voordelig!</p>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-semibold mb-4">Handgereedschap</h3>
-                        <p class="text-gray-600">Uitgebreid assortiment handgereedschap</p>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-arrows-up-to-line text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Hoogwerkers</h3>
+                        <p class="text-gray-600">Veilig werken op hoogte. Diverse modellen direct leverbaar.</p>
                     </div>
-                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-xl transition duration-300">
-                        <h3 class="text-xl font-semibold mb-4">Specialistisch Materieel</h3>
-                        <p class="text-gray-600">Gespecialiseerd equipment voor vakwerk</p>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-hammer text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold mb-4">Professioneel Gereedschap</h3>
+                        <p class="text-gray-600">Van boormachines tot slijpers. Topkwaliteit voor elke klus.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="voordelen" class="py-24 bg-gray-50">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Waarom Kiezen voor Ons?</h2>
+        <section id="assortiment" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-6 text-gray-900">Ons Uitgebreide Assortiment voor Elk Project</h2>
+                <p class="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
+                    Bij Den Haag Verhuur begrijpen we dat elk project uniek is en specifiek materieel vereist. Daarom bieden wij een breed en diep assortiment aan professionele machines, gereedschappen en materialen voor zowel de professional als de doe-het-zelver in Den Haag en omstreken. Van grondverzet tot werken op hoogte, en van tuinonderhoud tot evenementenopbouw, wij hebben de oplossing voor u. Ontdek hieronder een greep uit ons aanbod.
+                </p>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Materieel Per Categorie</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-tractor text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="text-xl font-semibold mb-2">Grondverzet & Compact</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Minigraafmachines</li>
+                            <li>Wielladers / Shovels</li>
+                            <li>Trilplaten & Stampers</li>
+                            <li>Grondboren</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-layer-group text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="text-xl font-semibold mb-2">Hoogwerkers & Steigers</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Schaarhoogwerkers</li>
+                            <li>Knikarmhoogwerkers</li>
+                            <li>Rolsteigers & Kamersteigers</li>
+                            <li>Ladders & Trappen</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-helmet-safety text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="text-xl font-semibold mb-2">Bouwplaatsinrichting</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Bouwhekken & Dranghekken</li>
+                            <li>Rijplaten & Kabelgoten</li>
+                            <li>Bouwstempels & Schragen</li>
+                            <li>Verlichting & Verwarmers</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-toolbox text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="text-xl font-semibold mb-2">Gereedschap</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Boor- & Breekhamers</li>
+                            <li>Slijp-, Zaag- & Schuurmachines</li>
+                            <li>Betonmolens & Mixers</li>
+                            <li>Meetapparatuur</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-seedling text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="text-xl font-semibold mb-2">Tuin & Park</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Verticuteermachines & Grondfrezen</li>
+                            <li>Heggenscharen & Kettingzagen</li>
+                            <li>Houtversnipperaars & Stobbenfrezen</li>
+                            <li>Gazonmaaiers & Bladblazers</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition duration-300">
+                        <i class="fas fa-truck text-3xl text-blue-600 mb-3"></i>
+                        <h4 class="text-xl font-semibold mb-2">Transport, Stroom & Klimaat</h4>
+                        <ul class="list-disc list-inside text-gray-600 space-y-1">
+                            <li>Aanhangwagens & Verhuisliften</li>
+                            <li>Aggregaten & Stroomkabels</li>
+                            <li>Bouwdrogers & Ventilatoren</li>
+                            <li>Waterpompen</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-8 text-center">Voorbeelden uit Ons Assortiment</h3>
+                <div class="overflow-x-auto shadow-lg rounded-lg mb-16">
+                    <table class="min-w-full bg-white">
+                        <thead class="bg-blue-600 text-white">
+                            <tr>
+                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Categorie</th>
+                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">Voorbeeld Materieel</th>
+                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm hidden sm:table-cell">Typische Toepassing</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-700">
+                            <tr>
+                                <td class="text-left py-3 px-4">Grondverzet</td>
+                                <td class="text-left py-3 px-4">Minigraver 1.5T, Trilplaat (benzine)</td>
+                                <td class="text-left py-3 px-4 hidden sm:table-cell">Sleuven graven, bestrating aantrillen</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="text-left py-3 px-4">Werken op Hoogte</td>
+                                <td class="text-left py-3 px-4">Rolsteiger 8m, Schaarhoogwerker 10m</td>
+                                <td class="text-left py-3 px-4 hidden sm:table-cell">Gevel reinigen, schilderen op hoogte</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left py-3 px-4">Elektrisch Gereedschap</td>
+                                <td class="text-left py-3 px-4">Breekhamer SDS-Max, Afkortzaag metaal</td>
+                                <td class="text-left py-3 px-4 hidden sm:table-cell">Betonvloer slopen, stalen profielen zagen</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="text-left py-3 px-4">Tuin & Park</td>
+                                <td class="text-left py-3 px-4">Houtversnipperaar (takken tot 10cm), Verticuteermachine</td>
+                                <td class="text-left py-3 px-4 hidden sm:table-cell">Snoeiafval verwerken, mos verwijderen uit gazon</td>
+                            </tr>
+                            <tr>
+                                <td class="text-left py-3 px-4">Bouwplaats</td>
+                                <td class="text-left py-3 px-4">Bouwdroger (grote capaciteit), Aggregaat 6kVA</td>
+                                <td class="text-left py-3 px-4 hidden sm:table-cell">Nieuwbouw drogen, stroom op locatie zonder netstroom</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Veelgevraagde Machines en Gereedschappen</h3>
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <p class="text-gray-700 mb-4">Bij Den Haag Verhuur zien we dagelijks een grote diversiteit aan projecten. Enkele van onze meest populaire huuritems die direct beschikbaar zijn (zolang de voorraad strekt!):</p>
+                    <ul class="list-disc list-inside text-gray-700 space-y-2 columns-1 sm:columns-2 lg:columns-3">
+                        <li>Minigravers (diverse gewichtsklassen)</li>
+                        <li>Trilplaten (voor diverse ondergronden)</li>
+                        <li>Hoogwerkers (schaar-, knikarm-, telescoop-)</li>
+                        <li>Rolsteigers (aluminium, diverse werkhoogtes)</li>
+                        <li>Aanhangwagens (enkelas, dubbelas, kippers)</li>
+                        <li>Betonmolens (verschillende groottes)</li>
+                        <li>Boorhamers en Breekhamers (accu en gesnoerd)</li>
+                        <li>Houtversnipperaars (benzine aangedreven)</li>
+                        <li>Waterpompen (dompel- en centrifugaalpompen)</li>
+                        <li>Aggregaten (stille en standaard modellen)</li>
+                        <li>Parketschuurmachines & Kantenschuurders</li>
+                        <li>Verticuteermachines (benzine of elektrisch)</li>
+                        <li>Stobbenfrezen voor boomstronken</li>
+                        <li>Verhuisliften (voor makkelijk verhuizen)</li>
+                        <li>Ladders, trappen en valbeveiliging</li>
+                    </ul>
+                    <p class="text-gray-700 mt-6">Staat wat u zoekt er niet direct tussen of heeft u advies nodig? Neem gerust <a href="#contact" class="text-blue-600 hover:underline font-semibold">contact</a> met ons op. Ons deskundig team helpt u graag verder met de juiste keuze voor uw klus in Den Haag!</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="benefits" class="py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">💥 EXCLUSIEVE VOORDELEN BIJ DEN HAAG VERHUUR</h2>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                    <div class="flex flex-col space-y-4">
-                        <h3 class="text-xl font-semibold">Flexibele Verhuurperiodes</h3>
-                        <p class="text-gray-600">Huur per dag, week of maand</p>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-check-circle text-2xl text-green-500 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Flexibele Huurperiodes</h3>
+                            <p class="text-gray-600">Huur per dag, weekend of week. Vraag naar onze langetermijntarieven!</p>
+                        </div>
                     </div>
-                    <div class="flex flex-col space-y-4">
-                        <h3 class="text-xl font-semibold">24/7 Support</h3>
-                        <p class="text-gray-600">Technische ondersteuning wanneer u het nodig heeft</p>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-shipping-fast text-2xl text-green-500 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Snelle Levering in Den Haag</h3>
+                            <p class="text-gray-600">Optionele haal- en brengservice voor uw gemak. Snel en betrouwbaar!</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start space-x-4">
+                        <i class="fas fa-tools text-2xl text-green-500 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Professioneel & Gekeurd Materieel</h3>
+                            <p class="text-gray-600">Al ons materieel is perfect onderhouden en voldoet aan alle veiligheidseisen.</p>
+                        </div>
+                    </div>
+                     <div class="flex items-start space-x-4">
+                        <i class="fas fa-headset text-2xl text-green-500 mt-1"></i>
+                        <div>
+                            <h3 class="text-xl font-bold mb-2">Deskundig Advies</h3>
+                            <p class="text-gray-600">Ons team staat klaar om u te helpen met de juiste machine voor uw klus.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="faq" class="py-24 bg-white">
-            <div class="container mx-auto px-6">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Veelgestelde Vragen</h2>
+        <section id="faq" class="py-24 bg-gray-50">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-3xl font-bold text-center mb-16 text-gray-900">Veelgestelde Vragen</h2>
                 <div class="max-w-3xl mx-auto space-y-6">
-                    <div class="border-b border-gray-200 pb-4">
-                        <h3 class="text-lg font-semibold mb-2">Wat zijn de verhuurvoorwaarden?</h3>
-                        <p class="text-gray-600">Legitimatie en borg vereist bij verhuur</p>
+                    <div class="border rounded-lg p-6 bg-white hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Hoe snel kan ik materieel huren bij Den Haag Verhuur?</h3>
+                        <p class="text-gray-600">Veel items zijn direct beschikbaar! Voor specifieke machines raden we aan te reserveren, zeker als de voorraad beperkt is.</p>
                     </div>
-                    <div class="border-b border-gray-200 pb-4">
-                        <h3 class="text-lg font-semibold mb-2">Hoe werkt de bezorging?</h3>
-                        <p class="text-gray-600">Bezorging mogelijk in heel Den Haag en omgeving</p>
+                    <div class="border rounded-lg p-6 bg-white hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Verhuren jullie ook aan particulieren?</h3>
+                        <p class="text-gray-600">Jazeker! Zowel professionals als particuliere doe-het-zelvers in Den Haag en omstreken kunnen bij ons terecht.</p>
+                    </div>
+                    <div class="border rounded-lg p-6 bg-white hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Wat heb ik nodig om te huren?</h3>
+                        <p class="text-gray-600">Een geldig legitimatiebewijs is vereist. Afhankelijk van het materieel kunnen er aanvullende voorwaarden zijn (bijv. rijbewijs voor bepaalde voertuigen). Informeer bij reservering!</p>
+                    </div>
+                     <div class="border rounded-lg p-6 bg-white hover:shadow-md transition duration-300">
+                        <h3 class="text-xl font-bold mb-2">Bezorgen jullie ook op locatie?</h3>
+                        <p class="text-gray-600">Ja, wij bieden een transportservice. De kosten hiervan zijn afhankelijk van de afstand en het type materieel. Vraag naar de mogelijkheden.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-24 bg-blue-600 text-white">
-            <div class="container mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold mb-8">Neem Contact Op</h2>
-                <p class="text-xl mb-8">Vraag een offerte aan of stel uw vraag</p>
-                <a href="mailto:info@denhaagverhuur.nl" class="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transform hover:scale-105 transition duration-300">
-                    info@denhaagverhuur.nl
+        <section id="contact" class="py-24 bg-blue-600">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-white mb-8">🎯 DIRECT RESERVEREN OF ADVIES NODIG?</h2>
+                <p class="text-xl text-white mb-8">Ons team in Den Haag staat voor u klaar. Neem vandaag nog contact op!</p>
+                <a href="https://hansschuiling.nl" class="inline-block bg-white hover:bg-gray-100 text-blue-600 font-bold py-4 px-8 rounded-lg transform hover:scale-105 transition duration-300 shadow-lg">
+                    Huur Nu ➜
                 </a>
-            </div>
+                            </div>
         </section>
     </main>
 
-    <footer class="bg-gray-900 text-gray-300 py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-white text-lg font-semibold mb-4">Den Haag Verhuur</h3>
-                    <p class="mb-4">Professionele verhuur van bouwmaterieel</p>
+                    <h3 class="text-xl font-bold mb-4">Contact Den Haag Verhuur</h3>
+                    <p class="mb-1">Adres: Peuldreef 1A, 2635 BX Den Hoorn</p>
+                    <p class="mb-1">Telefoon: <a href="tel:0701234567" class="hover:text-blue-400">070 - 123 45 67</a></p>
+                    <p class="mb-2">Email: <a href="mailto:info@denhaagverhuur.nl" class="hover:text-blue-400">info@denhaagverhuur.nl</a></p>
                 </div>
                 <div>
-                    <h3 class="text-white text-lg font-semibold mb-4">Contact</h3>
-                    <p>info@denhaagverhuur.nl</p>
-                </div>
-                <div>
-                    <h3 class="text-white text-lg font-semibold mb-4">Links</h3>
+                    <h3 class="text-xl font-bold mb-4">Handige Links</h3>
                     <ul class="space-y-2">
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition-colors duration-300">Algemene Voorwaarden</a></li>
+                        <li><a href="#assortiment" class="hover:text-blue-400 transition-colors duration-300">Ons Assortiment</a></li>
+                        <li><a href="#faq" class="hover:text-blue-400 transition-colors duration-300">Veelgestelde Vragen</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition-colors duration-300">Algemene Voorwaarden</a></li>
                     </ul>
                 </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Volg Ons</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" aria-label="Facebook" class="hover:text-blue-400 transition-colors duration-300"><i class="fab fa-facebook fa-lg"></i></a>
+                        <a href="#" aria-label="Instagram" class="hover:text-blue-400 transition-colors duration-300"><i class="fab fa-instagram fa-lg"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="hover:text-blue-400 transition-colors duration-300"><i class="fab fa-linkedin fa-lg"></i></a>
+                    </div>
+                </div>
             </div>
-            <div class="border-t border-gray-800 mt-12 pt-8 text-center">
-                <p>&copy; 2024 Den Haag Bouwmachine en Gereedschappen Verhuur. Alle rechten voorbehouden.</p>
+            <div class="mt-8 pt-8 border-t border-gray-800 text-center">
+                <p>&copy; <script>document.write(new Date().getFullYear())</script> Den Haag Verhuur. Alle rechten voorbehouden.</p>
             </div>
         </div>
     </footer>
+<!-- Default Statcounter code for Den Haag Verhuur
+https://denhaagverhuur.nl -->
+<script type="text/javascript">
+var sc_project=13135784; 
+var sc_invisible=1; 
+var sc_security="d1a0839f"; 
+</script>
+<script type="text/javascript"
+src="https://www.statcounter.com/counter/counter.js"
+async></script>
+<noscript><div class="statcounter"><a title="Web Analytics
+Made Easy - Statcounter" href="https://statcounter.com/"
+target="_blank"><img class="statcounter"
+src="https://c.statcounter.com/13135784/0/d1a0839f/1/"
+alt="Web Analytics Made Easy - Statcounter"
+referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
+<!-- End of Statcounter Code -->
 </body>
 </html>
